@@ -1,0 +1,47 @@
+
+.btn {
+  position: relative;
+
+  display: inline-block;
+  min-width: 185px;
+  max-width: 216px;
+  padding: 15px 10px;
+
+  border: solid 2px @col;
+  border-radius: 0;
+  background: none;
+
+  font: 18px/1.3 "Roboto", "Arial",  sans-serif;
+  color: @col;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: @col-green;
+
+    color: @col-green;
+  }
+  &:active {
+    border-color: @col-green--dark;
+
+    color: @col-green--dark;
+  }
+  &--green {
+    border: solid 2px @col-green;
+
+    color: @col-green;
+    &:hover {
+      border-color: @col-green--dark;
+
+      color: @col-green--dark;
+    }
+    &:active {
+      border-color: @col-green;
+
+      color: @col-green;
+    }
+  }
+}

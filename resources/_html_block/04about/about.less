@@ -1,0 +1,44 @@
+.about {
+  position: relative;
+
+  margin-bottom: 45px;
+  padding: 0 0 0 70px;
+  &-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  &-photo {
+    float: left;
+    padding: 0 100px 0 0;
+  }
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    width: 42px;
+    height: 42px;
+
+    content: "";
+  }
+  &--first {
+    &::before {
+      background: url(../img/svg/world.svg) 50% 50% no-repeat;
+    }
+  }
+  &--second {
+    &::before {
+      background: url(../img/svg/group.svg) 50% 50% no-repeat;
+    }
+  }
+  &--third {
+    &::before {
+      background: url(../img/svg/edit.svg) 50% 50% no-repeat;
+    }
+  }
+  &--fourth {
+    &::before {
+      background: url(../img/svg/clip.svg) 50% 50% no-repeat;
+    }
+  }
+}

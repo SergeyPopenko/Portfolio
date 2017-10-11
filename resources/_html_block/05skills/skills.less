@@ -1,0 +1,76 @@
+.skills {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__progress {
+    position: relative;
+
+    height: 30px;
+  }
+  &__item {
+    padding: 40px 0 0 0;
+  }
+  &__my-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 30px;
+
+    text-align: right;
+
+    transition: width .8s;
+  }
+  &__my-progress.active {
+    width: 90%;
+  }
+  &__my-persent {
+    display: inline-block;
+    width: 60px;
+
+    line-height: 30px;
+    color: @col;
+    text-align: center;
+  }
+  &-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  &-photo {
+    float: left;
+    padding: 0 100px 0 0;
+  }
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    width: 42px;
+    height: 42px;
+
+    content: "";
+  }
+  &--first {
+    &::before {
+      background: url(../img/svg/world.svg) 50% 50% no-repeat;
+    }
+  }
+  &--second {
+    &::before {
+      background: url(../img/svg/group.svg) 50% 50% no-repeat;
+    }
+  }
+  &--third {
+    &::before {
+      background: url(../img/svg/edit.svg) 50% 50% no-repeat;
+    }
+  }
+  &--fourth {
+    &::before {
+      background: url(../img/svg/clip.svg) 50% 50% no-repeat;
+    }
+  }
+}
