@@ -1,0 +1,91 @@
+.portfolio__list {
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:     -ms-flex;
+  display:      -o-flex;
+  display:         flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  -webkit-flex-wrap: wrap;
+     -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+       -o-flex-wrap: wrap;
+          flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio__item {
+  width: 31%;
+  margin-bottom: 3.39%;
+
+  &:hover {
+    .portfolio__descr {
+      transform: translateY(-100%);
+    }
+
+    .portfolio__link {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.portfolio__link {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    background-color: rgba(46, 204, 113, .75);
+    background-image: url(../img/svg/loupe.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+            background-size: 60px 60px;
+
+    content: "";
+    transition: .5s;
+
+    -webkit-background-size: 60px 60px;
+  }
+}
+
+.portfolio__img {
+  margin: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.portfolio__descr {
+  position: absolute;
+  top: 100%;
+  z-index: 3;
+
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+
+  background-color: rgba(0, 0, 0, .1);
+
+  color: @col;
+  text-align: center;
+
+  transition: .5s;
+}
